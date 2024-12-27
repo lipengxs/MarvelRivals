@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marvel Rivals - Game Guides & Tips</title>
+        <meta name="description" content="Complete Marvel Rivals guides: Meta tier list, beginner heroes guide, and server information. Everything you need to get started!">
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Marvel Rivals - Game Guides & Tips"/>
+        <meta property="og:description" content="Complete Marvel Rivals guides: Meta tier list, beginner heroes guide, and server information."/>
+        <meta property="og:url" content="https://marvelrivals.net/guides"/>
+        <meta property="og:image" content="/static/logo.png">
+        <meta property="og:site_name" content="Marvel Rivals"/>
+        <link rel="canonical" href="https://marvelrivals.net/guides"/>
+        <link rel="icon" href="/static/favicon.ico" sizes="32x32"/>
+        <link rel="stylesheet" href="/static/base.css?v=0.5">
+          
+        <!-- Microsoft Validation -->
+        <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+        <meta name="monetag" content="f34c560c0ee88e51eca6e7e7b3216539">
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJYFN6CYK8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NJYFN6CYK8');
+        </script>
+        <style>
+            /* 保持基础样式与 heroes.html 一致 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: #f5f5f5;
+            }
+
+            /* Header styles */
+            header {
+                background: #1a1a1a;
+                color: white;
+                padding: 1rem 0;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* 攻略页面特定样式 */
+            .guides-section {
+                padding: 100px 0 50px;
+                background: white;
+            }
+
+            .guide-content {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .guide-block {
+                margin-bottom: 60px;
+                padding: 30px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .guide-block:last-child {
+                margin-bottom: 0;
+            }
+
+            .guide-header {
+                text-align: center;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #e62429;
+            }
+
+            .guide-header h2 {
+                font-size: 2.2em;
+                color: #1a1a1a;
+                margin-bottom: 10px;
+            }
+
+            .guide-header p {
+                color: #666;
+                font-size: 1.1em;
+            }
+
+            /* Tier List 样式 */
+            .tier-row {
+                margin-bottom: 30px;
+                background: #f9f9f9;
+                border-radius: 8px;
+                padding: 20px;
+            }
+
+            .tier-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .tier-label {
+                font-size: 1.8em;
+                font-weight: bold;
+                margin-right: 15px;
+                color: #e62429;
+            }
+
+            .hero-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+
+            .hero-tag {
+                background: #e62429;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.9em;
+            }
+
+            /* Server Guide 样式 */
+            .server-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+
+            .server-table th,
+            .server-table td {
+                padding: 15px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+
+            .server-table th {
+                background: #f5f5f5;
+                font-weight: bold;
+            }
+
+            .server-table tr:hover {
+                background: #f9f9f9;
+            }
+
+            /* New Player Guide 样式 */
+            .role-section {
+                background: #f9f9f9;
+                padding: 25px;
+                border-radius: 8px;
+                margin: 30px 0;
+            }
+
+            .role-section h3 {
+                color: #e62429;
+                margin-bottom: 15px;
+                font-size: 1.4em;
+            }
+
+            .role-list {
+                list-style: none;
+                margin: 15px 0;
+            }
+
+            .role-list li {
+                margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
+            }
+
+            .role-list li:before {
+                content: "•";
+                color: #e62429;
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+
+            .hero-card {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .hero-card h4 {
+                color: #e62429;
+                margin-bottom: 10px;
+                font-size: 1.3em;
+            }
+
+            .hero-link {
+                display: inline-block;
+                margin-top: 15px;
+                color: #e62429;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .hero-link:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .guide-header h2 {
+                    font-size: 1.8em;
+                }
+
+                .guide-block {
+                    padding: 20px;
+                }
+
+                .server-table {
+                    display: block;
+                    overflow-x: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="120946" async data-cfasync="false"></script>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'e371e526578fca5481ea1fd0dd0b78f6',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/e371e526578fca5481ea1fd0dd0b78f6/invoke.js"></script>
+        
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/heroes">Heroes</a></li>
+                        <li><a href="/hero-team">Hero Teams</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Guides</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/news" >News</a></li>
+                        <li><a href="/download"  class="download-btn">Download</a></li>
+                    </ul>
+                    <div class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="guides-section">
+            <div class="guide-content">
+                <!-- Meta Tier List -->
+                <div class="guide-block" id="tier-list">
+                    <div class="guide-header">
+                        <h2>Best Heroes: Meta Tier List (Prelaunch)</h2>
+                        <p>A comprehensive tier list based on closed beta performance</p>
+                    </div>
+
+                    <div class="tier-row">
+                        <div class="tier-header">
+                            <span class="tier-label">S Tier</span>
+                        </div>
+                        <div class="hero-tags">
+                            <span class="hero-tag">Venom</span>
+                            <span class="hero-tag">Luna Snow</span>
+                            <span class="hero-tag">Hela</span>
+                            <span class="hero-tag">The Punisher</span>
+                            <span class="hero-tag">Thor</span>
+                            <span class="hero-tag">Rocket Raccoon</span>
+                        </div>
+                        <p>These are the top characters in the game. They excel in any match and are likely candidates for balance adjustments before launch.</p>
+                    </div>
+
+                    <div class="tier-row">
+                        <div class="tier-header">
+                            <span class="tier-label">A Tier</span>
+                        </div>
+                        <div class="hero-tags">
+                            <span class="hero-tag">Magneto</span>
+                            <span class="hero-tag">Adam Warlock</span>
+                            <span class="hero-tag">Doctor Strange</span>
+                            <span class="hero-tag">Mantis</span>
+                            <span class="hero-tag">Scarlet Witch</span>
+                        </div>
+                        <p>Solid picks that offer good balance between damage and utility. While not quite as dominant as S Tier characters, they are definitely worth mastering.</p>
+                    </div>
+
+                    <div class="tier-row">
+                        <div class="tier-header">
+                            <span class="tier-label">B Tier</span>
+                        </div>
+                        <div class="hero-tags">
+                            <span class="hero-tag">Groot</span>
+                            <span class="hero-tag">Jeff the Land Shark</span>
+                            <span class="hero-tag">Iron Man</span>
+                            <span class="hero-tag">Storm</span>
+                            <span class="hero-tag">Star-Lord</span>
+                            <span class="hero-tag">Namor</span>
+                            <span class="hero-tag">Loki</span>
+                        </div>
+                        <p>These characters can be very effective in the right hands but may require more skill and practice to master.</p>
+                    </div>
+
+                    <div class="tier-row">
+                        <div class="tier-header">
+                            <span class="tier-label">C Tier</span>
+                        </div>
+                        <div class="hero-tags">
+                            <span class="hero-tag">Hulk</span>
+                            <span class="hero-tag">Magik</span>
+                            <span class="hero-tag">Spider-Man</span>
+                            <span class="hero-tag">Black Panther</span>
+                            <span class="hero-tag">Peni Parker</span>
+                        </div>
+                        <p>These characters currently struggle to fulfill their intended roles effectively and may need significant buffs or reworks.</p>
+                    </div>
+                </div>
+
+                <!-- Best Heroes for New Players -->
+                <div class="guide-block" id="new-players">
+                    <div class="guide-header">
+                        <h2>Best Heroes for New Players</h2>
+                        <p>A beginner's guide to selecting your first Marvel Rivals characters</p>
+                    </div>
+
+                    <div class="role-section">
+                        <h3>The Different Role Options</h3>
+                        <p>Marvel Rivals features 3 distinct roles:</p>
+                        <ul class="role-list">
+                            <li><strong>Duelist:</strong> Attackers focused on damage output and flanking</li>
+                            <li><strong>Vanguard:</strong> Tanks that protect objectives and teammates</li>
+                            <li><strong>Strategist:</strong> Support characters with healing and utility abilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-card">
+                        <h4>Best Beginner Duelist: The Punisher</h4>
+                        <p>A straightforward attacker with familiar FPS mechanics and strong damage output. Perfect for players new to the genre.</p>
+                        <a href="/heroes#punisher" class="hero-link">Learn More About The Punisher →</a>
+                    </div>
+
+                    <div class="hero-card">
+                        <h4>Best Beginner Vanguard: Magneto</h4>
+                        <p>An effective tank with straightforward defensive abilities and good team support options.</p>
+                        <a href="/heroes#magneto" class="hero-link">Learn More About Magneto →</a>
+                    </div>
+
+                    <div class="hero-card">
+                        <h4>Best Beginner Strategist: Jeff the Land Shark</h4>
+                        <p>A dedicated healer that's easy to learn and focuses primarily on supporting teammates.</p>
+                        <a href="/heroes#jeff" class="hero-link">Learn More About Jeff →</a>
+                    </div>
+                </div>
+
+                <!-- Servers Guide -->
+                <div class="guide-block" id="servers">
+                    <div class="guide-header">
+                        <h2>Server Regions</h2>
+                        <p>Select the best server for minimal lag in Marvel Rivals</p>
+                    </div>
+
+                    <table class="server-table">
+                        <tr>
+                            <th>Region</th>
+                            <th>Server Locations</th>
+                        </tr>
+                        <tr>
+                            <td>North America</td>
+                            <td>Oregon, Dallas, Northern Virginia</td>
+                        </tr>
+                        <tr>
+                            <td>Europe</td>
+                            <td>Frankfurt, Warsaw</td>
+                        </tr>
+                        <tr>
+                            <td>Middle East</td>
+                            <td>Dammam</td>
+                        </tr>
+                        <tr>
+                            <td>South America</td>
+                            <td>São Paulo</td>
+                        </tr>
+                        <tr>
+                            <td>Asia-Pacific</td>
+                            <td>Tokyo, Singapore, Sydney</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                        <div class="social-links">
+                            <a href="https://discord.gg/marvelrivals" target="_blank" aria-label="Discord">
+                                <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3>Game</h3>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/download" target="_blank">Download</a></li>
+                                <li><a href="/news" >News</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Heroes</h3>
+                            <ul>
+                                <li><a href="/heroes">Heroes List</a></li>
+                                <li><a href="/hero-team">Hero Teams</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Guides</h3>
+                            <ul>
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <ul>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-of-service">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 Marvel Rivals. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

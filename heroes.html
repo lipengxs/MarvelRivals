@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marvel Rivals - Heroes Gallery</title>
+        <meta name="description" content="Explore the heroes of Marvel Rivals, featuring iconic Marvel characters in this team-based PvP shooter.">
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Marvel Rivals - Heroes Gallery"/>
+        <meta property="og:description" content="Explore the heroes of Marvel Rivals, featuring iconic Marvel characters in this team-based PvP shooter."/>
+        <meta property="og:url" content="https://marvelrivals.net/heroes"/>
+        <meta property="og:image" content="https://marvelrivals.net/static/logo.png">
+        <meta property="og:site_name" content="Marvel Rivals"/>
+        <link rel="canonical" href="https://marvelrivals.net/heroes"/>
+        <link rel="icon" href="static/favicon.ico" sizes="32x32"/>
+        <link rel="stylesheet" href="static/base.css?v=0.5">
+        <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424" />
+        <meta name="monetag" content="f34c560c0ee88e51eca6e7e7b3216539">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3143538773884507"
+        crossorigin="anonymous"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H4TYXV5E9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9H4TYXV5E9');
+        </script>
+       
+        <style>
+            /* 保留原有的基础样式 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: #f5f5f5;
+            }
+
+            /* Header styles */
+            header {
+                background: #1a1a1a;
+                color: white;
+                padding: 1rem 0;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+
+            
+
+            /* Heroes section specific styles */
+            .heroes-section {
+                padding: 100px 0 50px;
+                background: white;
+            }
+
+            .heroes-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 20px;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .hero-card {
+                width: 100%;
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+                display: flex;
+                height: 400px;
+                margin-bottom: 20px;
+            }
+
+            .hero-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+
+            .hero-image {
+                width: 181px;
+                height: 400px;
+                object-fit: contain;
+                background-color: #f5f5f5;
+                flex-shrink: 0;
+                padding: 20px 0;
+            }
+
+            .hero-info {
+                flex: 1;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .hero-name {
+                font-size: 2em;
+                margin-bottom: 8px;
+                color: #1a1a1a;
+            }
+
+            .hero-nickname {
+                font-size: 1.4em;
+                color: #666;
+                margin-bottom: 20px;
+            }
+
+            .hero-role {
+                display: inline-block;
+                padding: 6px 18px;
+                background: #e62429;
+                color: white;
+                border-radius: 20px;
+                font-size: 1em;
+                margin-bottom: 20px;
+                align-self: flex-start;
+            }
+
+            .hero-description {
+                color: #666;
+                font-size: 1.1em;
+                line-height: 1.6;
+                flex: 1;
+            }
+
+            /* Footer styles */
+            footer {
+                background: #1a1a1a;
+                color: white;
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .social-links {
+                margin-bottom: 2rem;
+            }
+
+            .social-links a {
+                color: white;
+                margin: 0 1rem;
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+
+            @media (max-width: 1200px) {
+                .heroes-grid {
+                    grid-template-columns: 1fr;
+                    max-width: 800px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .hero-card {
+                    flex-direction: column;
+                    height: auto;
+                }
+
+                .hero-image {
+                    width: 100%;
+                    height: 329px;
+                    padding: 10px 0;
+                }
+
+                .hero-info {
+                    padding: 20px;
+                    min-height: 250px;
+                }
+            }
+
+            .hero-info::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .hero-info::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            .hero-info::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 2px;
+            }
+
+            .hero-info::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            /* 在现有样式后添加 */
+            .filter-section {
+                margin: 20px auto 40px;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+
+            .filter-group {
+                margin-bottom: 20px;
+            }
+
+            .filter-group h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .filter-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                border: 2px solid #e62429;
+                background: transparent;
+                color: #e62429;
+                border-radius: 20px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+
+            .filter-btn:hover {
+                background: #e62429;
+                color: white;
+            }
+
+            .filter-btn.active {
+                background: #e62429;
+                color: white;
+            }
+
+            /* 为不同角色添加标识色 */
+            .hero-role.DUELIST {
+                background: #ff4655;
+            }
+
+            .hero-role.VANGUARD {
+                background: #438eff;
+            }
+
+            .hero-role.STRATEGIST {
+                background: #47d854;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="120946" async data-cfasync="false"></script>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'e371e526578fca5481ea1fd0dd0b78f6',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/e371e526578fca5481ea1fd0dd0b78f6/invoke.js"></script>
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/heroes">Heroes</a></li>
+                        <li><a href="/hero-team">Hero Teams</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Guides</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/news" >News</a></li>
+                        <li><a href="/download" class="download-btn">Download</a></li>
+                    </ul>
+                    <div class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="heroes-section">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Heroes Gallery</h1>
+                    <p>Choose your hero and join the battle!</p>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <h3>Role</h3>
+                        <div class="filter-buttons" id="roleFilters">
+                            <button class="filter-btn active" data-role="all">All</button>
+                            <button class="filter-btn" data-role="DUELIST">Duelist</button>
+                            <button class="filter-btn" data-role="VANGUARD">Vanguard</button>
+                            <button class="filter-btn" data-role="STRATEGIST">Strategist</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="heroes-grid" id="heroesGrid">
+                    <!-- Heroes will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+       
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                        <div class="social-links">
+                            <a href="https://discord.gg/marvelrivals" target="_blank" aria-label="Discord">
+                                <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3>Game</h3>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/download" target="_blank">Download</a></li>
+                                <li><a href="/news" >News</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Heroes</h3>
+                            <ul>
+                                <li><a href="/heroes">Heroes List</a></li>
+                                <li><a href="/hero-team">Hero Teams</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Guides</h3>
+                            <ul>
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <ul>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-of-service">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 Marvel Rivals. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="static/heros-data.js?v=0.6"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heroesGrid = document.getElementById('heroesGrid');
+                let currentRoleFilter = 'all';
+
+                function renderHeroes() {
+                    heroesGrid.innerHTML = '';
+                    
+                    heroesData.forEach(hero => {
+                        // 检查是否符合当前筛选条件
+                        if (currentRoleFilter === 'all' || hero.careerIconName === currentRoleFilter) {
+                            
+                            const card = document.createElement('div');
+                            card.className = 'hero-card';
+                            
+                            card.innerHTML = `
+                                <img src="${hero.selectImg}" alt="${hero.nickname}" class="hero-image">
+                                <div class="hero-info">
+                                    <h2 class="hero-name">${hero.name}</h2>
+                                    <h3 class="hero-nickname">${hero.nickname}</h3>
+                                    <div class="hero-role ${hero.careerIconName}">${hero.careerIconName}</div>
+                                    <p class="hero-description">${hero.intro}</p>
+                                </div>
+                            `;
+                            
+                            heroesGrid.appendChild(card);
+                        }
+                    });
+                }
+
+                // 添加筛选器事件监听
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const filterType = this.parentElement.id === 'roleFilters' ? 'role' : 'difficulty';
+                        const value = this.dataset[filterType];
+                        
+                        // 更新激活状态
+                        this.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // 更新当前筛选值
+                        if (filterType === 'role') {
+                            currentRoleFilter = value;
+                        }
+                        
+                        renderHeroes();
+                    });
+                });
+
+                // 初始渲染
+                renderHeroes();
+            });
+        </script>
+    </body>
+</html>

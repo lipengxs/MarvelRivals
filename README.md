@@ -64,4 +64,4 @@ Minimum Requirements:
 
 ---
 
-© 2024 Marvel Rivals. All rights reserved.
+© 2025 Marvel Rivals. All rights reserved.

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marvel Rivals Tracker - Stats, Hero Analytics & Performance Tracking</title>
+        <meta name="description" content="Track your Marvel Rivals stats, hero performance, win rates, and rankings. View hero tier lists, leaderboards, and team compositions. Real-time updates every 5 minutes.">
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Marvel Rivals Tracker - Stats, Hero Analytics & Performance Tracking"/>
+        <meta property="og:description" content="Track your Marvel Rivals stats, hero performance, win rates, and rankings. View hero tier lists, leaderboards, and team compositions. Real-time updates every 5 minutes."/>
+        <meta property="og:url" content="https://marvelrivals.net/guides/rivals-tracker"/>
+        <meta property="og:image" content="/static/logo.png">
+        <meta property="og:site_name" content="Marvel Rivals"/>
+        <link rel="canonical" href="https://marvelrivals.net/guides/rivals-tracker"/>
+        <link rel="icon" href="/static/favicon.ico" sizes="32x32"/>
+        <link rel="stylesheet" href="https://marvelrivals.net/static/base.css?v=0.5">
+          
+        <!-- Microsoft Validation -->
+        <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJYFN6CYK8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NJYFN6CYK8');
+        </script>
+        <style>
+            .tracker-versions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin: 40px 0;
+            }
+
+            .version-card {
+                background: #f8f9fa;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .version-card h2 {
+                margin-bottom: 20px;
+                color: #333;
+                font-size: 24px;
+            }
+
+            .img-container {
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                border-radius: 8px;
+                margin: 0 auto 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .tracker-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: transform 0.3s ease;
+            }
+
+            .img-container:hover .tracker-img {
+                transform: scale(1.05);
+            }
+
+            .version-details {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .version-details p {
+                margin: 0;
+                color: #666;
+                line-height: 1.5;
+            }
+
+            .download-button, .visit-button {
+                display: inline-block;
+                padding: 12px 24px;
+                background: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                font-weight: 500;
+            }
+
+            .download-button:hover, .visit-button:hover {
+                background: #0056b3;
+            }
+
+            @media (max-width: 768px) {
+                .tracker-versions {
+                    grid-template-columns: 1fr;
+                }
+
+                .img-container {
+                    height: 250px;
+                }
+            }
+
+            /* Stats Dashboard Styles */
+            .stats-dashboard {
+                margin: 60px 0;
+            }
+
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .stat-card {
+                background: #fff;
+                border-radius: 10px;
+                padding: 25px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .stat-card h3 {
+                color: #333;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .hero-stats {
+                margin-top: 20px;
+            }
+
+            .hero-stat {
+                margin: 15px 0;
+            }
+
+            .hero-name {
+                display: block;
+                margin-bottom: 8px;
+                color: #444;
+                font-weight: 500;
+            }
+
+            .progress-bar {
+                background: #eee;
+                height: 20px;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .progress {
+                background: linear-gradient(90deg, #007bff, #00a0ff);
+                height: 100%;
+                border-radius: 10px;
+                transition: width 0.3s ease;
+            }
+
+            .percentage {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0.9em;
+                color: #333;
+                font-weight: 500;
+            }
+
+            /* Features Section Styles */
+            .features {
+                margin: 60px 0;
+                padding: 40px 0;
+                background: #f8f9fa;
+            }
+
+            .features h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                color: #333;
+                font-size: 28px;
+            }
+
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .feature-card {
+                background: #fff;
+                border-radius: 10px;
+                padding: 25px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .feature-card h3 {
+                color: #333;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .feature-card ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .feature-card li {
+                margin: 12px 0;
+                padding-left: 25px;
+                position: relative;
+                color: #666;
+                line-height: 1.5;
+            }
+
+            .feature-card li:before {
+                content: "✓";
+                color: #007bff;
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+
+            @media (max-width: 992px) {
+                .features-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .stats-grid,
+                .features-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .stat-card,
+                .feature-card {
+                    padding: 20px;
+                }
+            }
+
+            .mode-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin: 40px 0;
+            }
+
+            .mode-card {
+                background: #fff;
+                border-radius: 10px;
+                padding: 25px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .mode-card h3 {
+                color: #333;
+                margin-bottom: 20px;
+                font-size: 20px;
+                border-bottom: 2px solid #007bff;
+                padding-bottom: 10px;
+            }
+
+            .mode-card ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .mode-card li {
+                margin: 12px 0;
+                padding-left: 25px;
+                position: relative;
+                color: #666;
+            }
+
+            .mode-card li:before {
+                content: "•";
+                color: #007bff;
+                position: absolute;
+                left: 8px;
+                font-weight: bold;
+            }
+
+            @media (max-width: 992px) {
+                .mode-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .mode-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'e371e526578fca5481ea1fd0dd0b78f6',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/e371e526578fca5481ea1fd0dd0b78f6/invoke.js"></script>
+        
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/heroes">Heroes</a></li>
+                        <li><a href="/hero-team">Hero Teams</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Guides</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/rivals-tracker">Rivals Tracker</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/news" >News</a></li>
+                        <li><a href="/download"  class="download-btn">Download</a></li>
+                    </ul>
+                    <div class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <section class="hero-section">
+                    <h1>Marvel Rivals Tracker</h1>
+                    <p class="subtitle">Your Ultimate Companion for Hero Statistics, Win Rates & Performance Analytics</p>
+                </section>
+
+                <section class="tracker-versions">
+                    <div class="version-card desktop">
+                        <h2>Desktop Version</h2>
+                        <div class="img-container">
+                            <img src="../static/images/rivals-desk.jpg" alt="Marvel Rivals Desktop Tracker Interface" class="tracker-img">
+                        </div>
+                        <div class="version-details">
+                            <p>A powerful desktop application for in-depth performance tracking and analysis.</p>
+                            <a target="_blank" href="https://master.dl.sourceforge.net/project/marvel-rivals-tracker/Marvel%20Rivals%20Tracker%20Release%20v1.2.zip?viasf=1" class="download-button">Download v1.2</a>
+                        </div>
+                    </div>
+
+                    <div class="version-card web">
+                        <h2>Web Version</h2>
+                        <div class="img-container">
+                            <img src="../static/images/rivals-website.jpg" alt="Marvel Rivals Web Tracker Interface" class="tracker-img">
+                        </div>
+                        <div class="version-details">
+                            <p>Access your stats anywhere with our web-based tracker.</p>
+                            <a target="_blank" href="https://rivalsmeta.com/" class="visit-button">Visit Web Tracker</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-dashboard">
+                    <h2>Live Meta Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card win-rates">
+                            <h3>Top Heroes by Win Rate</h3>
+                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-name">Peni Parker</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54.74%"></div>
+                                        <span class="percentage">54.74%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Mantis</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54.27%"></div>
+                                        <span class="percentage">54.27%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Magik</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54.27%"></div>
+                                        <span class="percentage">54.27%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Rocket Raccoon</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54.14%"></div>
+                                        <span class="percentage">54.14%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Loki</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 53.79%"></div>
+                                        <span class="percentage">53.79%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card pick-rates">
+                            <h3>Most Played Heroes</h3>
+                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-name">Mantis</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54.27%"></div>
+                                        <span class="percentage">54.27%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Doctor Strange</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 51.55%"></div>
+                                        <span class="percentage">51.55%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Luna Snow</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 44.77%"></div>
+                                        <span class="percentage">44.77%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Cloak and Dagger</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 39.73%"></div>
+                                        <span class="percentage">39.73%</span>
+                                    </div>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-name">Hela</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 28.73%"></div>
+                                        <span class="percentage">28.73%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="game-modes">
+                    <h2>Game Mode Statistics</h2>
+                    <div class="mode-grid">
+                        <div class="mode-card">
+                            <h3>Competitive</h3>
+                            <ul>
+                                <li>Rank distribution tracking</li>
+                                <li>Top 500 leaderboard updates every 20 minutes</li>
+                                <li>Hero pick rates by rank tier</li>
+                                <li>Win rates across all platforms (PC, PS, XBOX)</li>
+                            </ul>
+                        </div>
+                        <div class="mode-card">
+                            <h3>Quick Play</h3>
+                            <ul>
+                                <li>Casual match statistics</li>
+                                <li>Hero popularity trends</li>
+                                <li>Map win rates</li>
+                                <li>Team composition analysis</li>
+                            </ul>
+                        </div>
+                        <div class="mode-card">
+                            <h3>Tournament</h3>
+                            <ul>
+                                <li>Professional match data</li>
+                                <li>Tournament meta analysis</li>
+                                <li>Ban rate statistics</li>
+                                <li>Team strategy insights</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <h2>Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Real-time Stats Tracking</h3>
+                            <ul>
+                                <li>Hero performance metrics</li>
+                                <li>Win rates and pick rates</li>
+                                <li>KDA ratios and accuracy stats</li>
+                                <li>Updates every 5 minutes</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Rank Tracking</h3>
+                            <ul>
+                                <li>Track your competitive rank</li>
+                                <li>View rank history</li>
+                                <li>Compare with other players</li>
+                                <li>Top 500 leaderboards</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Match Analysis</h3>
+                            <ul>
+                                <li>Detailed match history</li>
+                                <li>Team composition analysis</li>
+                                <li>Map performance stats</li>
+                                <li>Teammate performance tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="https://marvelrivals.net/static/logo.png" alt="Marvel Rivals Logo">
+                        <div class="social-links">
+                            <a href="https://discord.gg/marvelrivals" target="_blank" aria-label="Discord">
+                                <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3>Game</h3>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/download" target="_blank">Download</a></li>
+                                <li><a href="/news" >News</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Heroes</h3>
+                            <ul>
+                                <li><a href="/heroes">Heroes List</a></li>
+                                <li><a href="/hero-team">Hero Teams</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Guides</h3>
+                            <ul>
+                                <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
+                                <li><a href="/guides/rivals-tracker">Rivals Tracker</a></li>
+                                <li><a href="/guides/video-guides">Video Guides</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <ul>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-of-service">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Marvel Rivals. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

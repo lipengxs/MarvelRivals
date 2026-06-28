@@ -35,6 +35,8 @@
         gtag('config', 'G-9H4TYXV5E9');
         </script>
         <meta name="indexnow-key" content="B362957FC36C5EDDD6079B6D78330424"/>
+    
+        <script type="application/ld+json" data-seo="home">[{"@context":"https://schema.org","@type":"WebSite","name":"Marvel Rivals Guide","url":"https://marvelrivals.net/","potentialAction":{"@type":"SearchAction","target":"https://marvelrivals.net/heroes/?search={search_term_string}","query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"Organization","name":"Marvel Rivals Guide","url":"https://marvelrivals.net/","logo":"https://marvelrivals.net/static/logo.png"}]</script>
     </head>
     <body>
         <script type="text/javascript">
@@ -55,7 +57,7 @@
                     </div>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/heroes">Heroes</a></li>
+                        <li><a href="/heroes/">Heroes</a></li>
                         <li><a href="/hero-team">Hero Teams</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle">Guides</a>
@@ -85,25 +87,25 @@
                         <p>Join the ultimate 6v6 superhero team-based PvP shooter where Marvel's greatest heroes and villains clash in epic battles!</p>
                         
                         <div class="release-date">
-                            <span>Release Date: December 6, 2024</span>
+                            <span>Available Now • Free-to-play 6v6 Marvel team shooter</span>
                         </div>
                         
                         <div class="countdown-container">
                             <div class="countdown-item">
-                                <span id="days">00</span>
-                                <span class="label">Days</span>
+                                <span>51</span>
+                                <span class="label">Heroes</span>
                             </div>
                             <div class="countdown-item">
-                                <span id="hours">00</span>
-                                <span class="label">Hours</span>
+                                <span>3</span>
+                                <span class="label">Roles</span>
                             </div>
                             <div class="countdown-item">
-                                <span id="minutes">00</span>
-                                <span class="label">Minutes</span>
+                                <span>6v6</span>
+                                <span class="label">Combat</span>
                             </div>
                             <div class="countdown-item">
-                                <span id="seconds">00</span>
-                                <span class="label">Seconds</span>
+                                <span>2026</span>
+                                <span class="label">Updated</span>
                             </div>
                         </div>
 
@@ -189,28 +191,11 @@
             <section id="characters" class="characters">
                 <div class="container">
                     <h2>Featured Heroes</h2>
-                    <div class="heroes-grid">
-                        <div class="hero-card">
-                            <img src="static/heroes/d6_93dbafe.png" alt="Iron Man" class="hero-image">
-                            <div class="hero-info">
-                                <h2 class="hero-name">ANTHONY "TONY" STARK</h2>
-                                <h3 class="hero-nickname">IRON MAN</h3>
-                                <div class="hero-role">DUELIST</div>
-                                <p class="hero-description">Armed with superior intellect and a nanotech battlesuit of his own design, Tony Stark stands alongside gods as the Invincible Iron Man.</p>
-                            </div>
-                        </div>
-                        <div class="hero-card">
-                            <img src="static/heroes/d24_8021ec4.png" alt="Captain America" class="hero-image">
-                            <div class="hero-info">
-                                <h2 class="hero-name">Steven "Steve" Rogers</h2>
-                                <h3 class="hero-nickname">Captain America</h3>
-                                <div class="hero-role">VANGUARD</div>
-                                <p class="hero-description">Enhanced by the Super-Soldier Serum, Steven Rogers uses his Vibranium shield and extensive combat training to confront any threat to justice.</p>
-                            </div>
-                        </div>
+                    <div class="featured-roster-grid" id="featuredHeroesGrid">
+                        <!-- Featured heroes are rendered from the expanded official roster data. -->
                     </div>
                     <div class="view-all-heroes">
-                        <a href="/heros" class="primary-btn">View All Heroes</a>
+                        <a href="/heroes/" class="primary-btn">View All Heroes</a>
                     </div>
                 </div>
             </section>
@@ -254,6 +239,80 @@
                     display: flex;
                     flex-direction: column;
                 }
+
+                .featured-roster-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                    gap: 22px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 20px 20px;
+                }
+
+                .featured-hero-card {
+                    background: #fff;
+                    border: 1px solid rgba(0,0,0,0.08);
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 8px 20px rgba(18, 24, 40, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100%;
+                }
+
+                .featured-hero-card img {
+                    width: 100%;
+                    aspect-ratio: 4 / 5;
+                    object-fit: cover;
+                    object-position: center top;
+                    background: #eef2f8;
+                }
+
+                .featured-hero-body {
+                    padding: 18px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    flex: 1;
+                }
+
+                .featured-hero-body h3 {
+                    color: #1a1a1a;
+                    font-size: 1.25rem;
+                    line-height: 1.2;
+                }
+
+                .featured-hero-body p {
+                    color: #555;
+                    line-height: 1.5;
+                    font-size: 0.95rem;
+                }
+
+                .featured-hero-meta {
+                    display: flex;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                }
+
+                .featured-hero-role {
+                    display: inline-flex;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    color: #fff;
+                    font-size: 0.78rem;
+                    font-weight: 700;
+                }
+
+                .featured-hero-role.DUELIST { background: #ff4655; }
+                .featured-hero-role.VANGUARD { background: #438eff; }
+                .featured-hero-role.STRATEGIST { background: #47d854; }
+
+                .featured-hero-link {
+                    color: #e62429;
+                    font-weight: 700;
+                    text-decoration: none;
+                    margin-top: auto;
+                }
                 
                 .hero-name {
                     font-size: 2em;
@@ -289,6 +348,10 @@
                         grid-template-columns: 1fr;
                         max-width: 800px;
                     }
+
+                    .featured-roster-grid {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                    }
                 }
                 
                 @media (max-width: 600px) {
@@ -305,6 +368,10 @@
                     .hero-info {
                         padding: 20px;
                     }
+
+                    .featured-roster-grid {
+                        grid-template-columns: 1fr;
+                    }
                 }
                 </style>
             <section id="news" class="news">
@@ -312,12 +379,12 @@
                     <h2>Latest News</h2>
                     <div class="news-grid">
                         <article class="news-card">
-                            <img src="static/images/news1.webp" alt="Moon Knight Announcement">
+                            <img src="static/heroes/official/cyclops.png" alt="Cyclops hero profile">
                             <div class="news-content">
-                                <span class="date">November 9, 2024</span>
-                                <h3>The Moon Haunts You! New Hero Moon Knight Joins Launch Roster!</h3>
-                                <p>Get ready for an illuminating addition to the Marvel Rivals lineup! This December, the fist of Khonshu, Moon Knight, will join our launch roster as the latest Duelist hero.</p>
-                                <a href="https://www.marvelrivals.com/news/20241109/40185_1192584.html" class="read-more" target="_blank">Read More →</a>
+                                <span class="date">June 11, 2026</span>
+                                <h3>Cyclops Added to the Hero Database</h3>
+                                <p>The local roster page now tracks the expanded official hero list, including Cyclops, Devil Dinosaur, Black Cat, White Fox, Elsa Bloodstone, Deadpool, Rogue, Gambit and more.</p>
+                                <a href="https://www.marvelrivals.com/20260611/41360_1303977.html" class="read-more" target="_blank">Read More →</a>
                             </div>
                         </article>
                     </div>
@@ -334,7 +401,7 @@
                         </div>
                         <div class="faq-item">
                             <h3>When is the release date?</h3>
-                            <p>Marvel Rivals is scheduled for release in late 2024. Join our beta test starting April 2024!</p>
+                            <p>Marvel Rivals launched on December 6, 2024 and is available now on PC and console storefronts.</p>
                         </div>
                         <div class="faq-item">
                             <h3>Is the game free to play?</h3>
@@ -342,7 +409,7 @@
                         </div>
                         <div class="faq-item">
                             <h3>How many heroes are available at launch?</h3>
-                            <p>The game will launch with over 20 playable heroes and villains from across the Marvel universe, with more being added regularly post-launch.</p>
+                            <p>This site now indexes 51 heroes from the official hero listing, including post-launch roster additions through June 2026.</p>
                         </div>
                         <div class="faq-item">
                             <h3>What game modes are available?</h3>
@@ -350,7 +417,7 @@
                         </div>
                         <div class="faq-item">
                             <h3>How do I join the beta test?</h3>
-                            <p>Sign up on our official website and register for the closed beta. Selected players will receive an email invitation with download instructions.</p>
+                            <p>The beta period has passed. Use the download links above to install from Steam, Epic Games Store, PlayStation, or Xbox.</p>
                         </div>
                         <div class="faq-item">
                             <h3>Will there be cross-platform play?</h3>
@@ -388,7 +455,7 @@
                         <div class="footer-column">
                             <h3>Heroes</h3>
                             <ul>
-                                <li><a href="/heroes">Heroes List</a></li>
+                                <li><a href="/heroes/">Heroes List</a></li>
                                 <li><a href="/hero-team">Hero Teams</a></li>
                             </ul>
                         </div>
@@ -414,36 +481,39 @@
                 </div>
             </div>
         </footer>
+        <script src="static/heroes-official-data.js?v=1.0"></script>
         <script>
-        // 设置目标日期为 December 6, 2024 UTC 00:00
-        const countDownDate = new Date('December 6, 2024 00:00:00 UTC').getTime();
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredGrid = document.getElementById('featuredHeroesGrid');
+            if (!featuredGrid || !window.officialHeroesData) return;
 
-        // 每秒更新倒计时
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            
-            // 计算天、小时、分钟和秒
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // 更新显示
-            document.getElementById('days').innerHTML = String(days).padStart(2, '0');
-            document.getElementById('hours').innerHTML = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerHTML = String(seconds).padStart(2, '0');
-            
-            // 当倒计时结束时
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById('days').innerHTML = "00";
-                document.getElementById('hours').innerHTML = "00";
-                document.getElementById('minutes').innerHTML = "00";
-                document.getElementById('seconds').innerHTML = "00";
-            }
-        }, 1000);
+            const heroes = officialHeroesData
+                .slice()
+                .sort((a, b) => String(b.releaseDate || '').localeCompare(String(a.releaseDate || '')))
+                .slice(0, 4);
+
+            const heroSlug = value => String(value || '')
+                .replace(/<[^>]*>/g, ' ')
+                .toLowerCase()
+                .replace(/&/g, ' and ')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, '');
+
+            featuredGrid.innerHTML = heroes.map(hero => {
+                const roles = (hero.roleTags || [hero.careerIconName]).map(role => `<span class="featured-hero-role ${role}">${role}</span>`).join('');
+                return `
+                    <article class="featured-hero-card">
+                        <img src="${hero.selectImg}" alt="${hero.nickname}" loading="lazy">
+                        <div class="featured-hero-body">
+                            <div class="featured-hero-meta">${roles}</div>
+                            <h3>${hero.nickname}</h3>
+                            <p>${hero.guide ? hero.guide.playstyle : hero.intro}</p>
+                            <a class="featured-hero-link" href="/heroes/${heroSlug(hero.nickname)}/">View hero guide</a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        });
         </script>
     </body>
 </html>

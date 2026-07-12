@@ -31,8 +31,14 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://marvelrivals.net/guides/heroes-guides</loc>
-        <lastmod>2026-06-28</lastmod>
+        <loc>https://marvelrivals.net/guides/team-composition</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marvelrivals.net/guides/hero-role-guide</loc>
+        <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

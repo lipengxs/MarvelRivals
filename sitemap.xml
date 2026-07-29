@@ -14,27 +14,51 @@
     </url>
     <url>
         <loc>https://marvelrivals.net/hero-team</loc>
-        <lastmod>2026-07-18</lastmod>
+        <lastmod>2026-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://marvelrivals.net/news</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://marvelrivals.net/download</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-07-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marvelrivals.net/guides/heroes-guides</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://marvelrivals.net/guides/team-composition</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marvelrivals.net/guides/ranked-team-comps</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://marvelrivals.net/guides/marvel-rivals-map-guide</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://marvelrivals.net/guides/thebes-map-guide</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://marvelrivals.net/guides/hero-role-guide</loc>
@@ -44,13 +68,13 @@
     </url>
     <url>
         <loc>https://marvelrivals.net/guides/video-guides</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://marvelrivals.net/guides/rivals-tracker</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -372,4 +396,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url><loc>https://marvelrivals.net/blog</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://marvelrivals.net/season/</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://marvelrivals.net/season/data-sources</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://marvelrivals.net/team-composer</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://marvelrivals.net/patches/official-source-review-2026-07</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://marvelrivals.net/patches/20260723-patch-notes</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

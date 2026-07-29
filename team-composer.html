@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marvel Rivals Team Composer | Role Coverage Check</title>
+  <meta name="description" content="Build a Marvel Rivals lineup and review transparent role coverage for pressure, space, protection, objectives and resets. No login or live-stat claims.">
+  <link rel="canonical" href="https://marvelrivals.net/team-composer">
+  <link rel="stylesheet" href="/static/base.css?v=0.7">
+  <style>.composer{max-width:1000px;margin:auto;padding:110px 20px 60px}.composer p,.composer li{line-height:1.7}.form,.output{padding:24px;border:1px solid #dbe3f0;border-radius:10px;background:#fff;margin:20px 0}.form label,.form select{display:block;width:100%;margin:10px 0}.form select{padding:8px}.form select[multiple]{min-height:230px}.form button{background:#b32245;color:#fff;border:0;border-radius:6px;padding:12px 18px;font-weight:700;cursor:pointer}.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.result-grid div{background:#f2f6fb;padding:14px;border-radius:8px}.label{font-size:.78rem;font-weight:700;letter-spacing:.08em;color:#52647b}.error{color:#a61936;font-weight:700}@media(max-width:650px){.result-grid{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<header><div class="container"><nav><div class="logo"><a href="/"><img src="/static/logo.png" alt="Marvel Rivals independent fan guide"></a></div><ul><li><a href="/season/">Season Hub</a></li><li><a href="/heroes/">Heroes</a></li><li><a href="/hero-team">Hero Teams</a></li><li><a class="active" href="/team-composer">Team Composer</a></li></ul></nav></div></header>
+<main class="composer">
+  <p class="label">INDEPENDENT DECISION TOOL · NO LOGIN · NO ACCOUNT OR MATCH DATA COLLECTED</p>
+  <h1>Team Composer</h1>
+  <p>Select one to six heroes, then optionally name the match context. The result explains basic role coverage; it does not claim a better win rate, current Meta, counters, or verified Team-Up strength.</p>
+  <form id="composer-form" class="form">
+    <label for="hero-select"><b>Heroes</b> — hold Ctrl/⌘ to select multiple</label>
+    <select id="hero-select" multiple required aria-describedby="composer-help"></select>
+    <label for="mode-select"><b>Target mode</b> — optional planning context</label>
+    <select id="mode-select"><option>Not specified</option><option>Competitive</option><option>Quick Play</option><option>Custom or organised play</option></select>
+    <label for="map-context"><b>Map consideration</b> — optional planning context</label>
+    <select id="map-context"><option>Not specified</option><option>Entry route and opening angle</option><option>Objective hold and contest space</option><option>Retreat route and regroup space</option></select>
+    <label for="team-priority"><b>Team preference</b> — optional planning context</label>
+    <select id="team-priority"><option>Not specified</option><option>Safer coordinated entry</option><option>Objective control</option><option>Protection and reset clarity</option><option>Practice a comfortable hero pool</option></select>
+    <p id="composer-help">These options stay in this browser and only make your review checklist clearer. They do not create a performance prediction.</p>
+    <button type="submit">Review coverage</button>
+  </form>
+  <section id="composer-output" class="output" aria-live="polite"><p>Select one to six heroes to review coverage.</p></section>
+  <section class="output"><h2>How this tool works</h2><p>Roles come from the source-linked hero registry. The job labels are an editorial framework: Duelists contribute pressure and finishing, Vanguards contribute space and objective presence, and Strategists contribute protection and reset support. A real composition still depends on player comfort, communication, the current version and confirmed Team-Up information.</p><p><a href="/season/">Season Hub</a> · <a href="/hero-team">Team-Up archive</a> · <a href="/guides/rivals-tracker">How to read third-party stats</a></p></section>
+</main>
+<script src="/static/heroes-official-data.js"></script><script src="/static/season-decision-data.js"></script><script src="/static/team-composer.js"></script>
+</body>
+</html>

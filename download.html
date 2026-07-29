@@ -14,7 +14,8 @@
         <meta property="og:site_name" content="Marvel Rivals"/>
         <link rel="canonical" href="https://marvelrivals.net/download"/>
         <link rel="icon" href="static/favicon.ico" sizes="32x32"/>
-        <link rel="stylesheet" href="static/base.css?v=0.5">
+        <link rel="stylesheet" href="static/base.css?v=0.7">
+        <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"Where to Get Marvel Rivals | Official Store Links","url":"https://marvelrivals.net/download","description":"Independent guide to official Marvel Rivals store listings."},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where can I download Marvel Rivals for PC?","acceptedAnswer":{"@type":"Answer","text":"Use an official PC store listing such as Steam or Epic Games Store. This independent guide does not host game installers or launcher files."}},{"@type":"Question","name":"Can I download Marvel Rivals on Xbox or PlayStation 5?","acceptedAnswer":{"@type":"Answer","text":"Use the official console store listing linked on this page and confirm current availability, account requirements and storage information there."}},{"@type":"Question","name":"Where can I find Marvel Rivals system requirements?","acceptedAnswer":{"@type":"Answer","text":"Check the current official Steam or Epic Games Store listing before installing, because requirements and storage guidance can change."}},{"@type":"Question","name":"Is there an official Marvel Rivals launcher download on this site?","acceptedAnswer":{"@type":"Answer","text":"No. This independent fan guide does not distribute launcher software, game files or third-party installers."}}]}]</script>
         <meta name="indexnow-key" content="B362957FC36C5EDDD6079B6D78330424"/>
         <!-- Microsoft Validation -->
         <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
@@ -156,6 +157,10 @@
                 margin-top: 20px;
             }
 
+            .download-faq details { border: 1px solid #e1e5ea; border-radius: 7px; padding: 15px; margin: 12px 0; background: #fff; }
+            .download-faq summary { cursor: pointer; font-weight: 700; color: #1a1a1a; }
+            .download-faq p { margin: 14px 0 0; }
+
             @media (max-width: 768px) {
                 .page-header h1 {
                     font-size: 2em;
@@ -193,7 +198,7 @@
                         <li><a href="/heroes/">Heroes</a></li>
                         <li><a href="/hero-team">Hero Teams</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Guides</a>
+                            <a href="/guides/heroes-guides" class="dropdown-toggle">Guides</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
                                 <li><a href="/guides/rivals-tracker">Rivals Tracker</a></li>
@@ -229,7 +234,7 @@
                                 <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/>
                             </svg>
                             <h3>Steam</h3>
-                            <a href="https://store.steampowered.com/app/2767030/Marvel_Rivals/" target="_blank" rel="noopener noreferrer" class="download-btn">View on Steam</a>
+                            <a href="https://store.steampowered.com/app/2767030/Marvel_Rivals/" target="_blank" rel="noopener noreferrer" class="download-btn" data-store="steam">View on Steam</a>
                         </div>
                         <div class="platform-card">
                             <svg class="platform-icon" viewBox="0 0 24 24">
@@ -237,7 +242,7 @@
                                 <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h18v8z"/>
                             </svg>
                             <h3>PlayStation 5</h3>
-                            <a href="https://store.playstation.com/en-us/concept/10010451/" target="_blank" rel="noopener noreferrer" class="download-btn">View on PlayStation Store</a>
+                            <a href="https://store.playstation.com/en-us/concept/10010451/" target="_blank" rel="noopener noreferrer" class="download-btn" data-store="playstation">View on PlayStation Store</a>
                         </div>
                         <div class="platform-card">
                             <svg class="platform-icon" viewBox="0 0 24 24">
@@ -245,7 +250,7 @@
                                 <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h18v8z"/>
                             </svg>
                             <h3>Xbox</h3>
-                            <a href="https://www.microsoft.com/store/productid/9n8pmw7qmd3d" target="_blank" rel="noopener noreferrer" class="download-btn">View on Microsoft Store</a>
+                            <a href="https://www.microsoft.com/store/productid/9n8pmw7qmd3d" target="_blank" rel="noopener noreferrer" class="download-btn" data-store="xbox">View on Microsoft Store</a>
                         </div>
                     </div>
                 </div>
@@ -253,7 +258,7 @@
                 <div class="info-block">
                     <h2>Epic Games Store</h2>
                     <p>PC players can also find Marvel Rivals through the Epic Games Store.</p>
-                    <a href="https://store.epicgames.com/p/marvel-rivals-182004" target="_blank" rel="noopener noreferrer" class="download-btn">View on Epic Games Store</a>
+                    <a href="https://store.epicgames.com/p/marvel-rivals-182004" target="_blank" rel="noopener noreferrer" class="download-btn" data-store="epic">View on Epic Games Store</a>
                     <div class="note">
                         <strong>Note:</strong> Store availability and required storage can change. Check your selected platform page before installing.
                     </div>
@@ -262,6 +267,15 @@
                 <div class="info-block">
                     <h2>System Requirements</h2>
                     <p>For the latest PC requirements, use the official Steam or Epic Games Store listing linked above.</p>
+                </div>
+
+                <div class="info-block download-faq">
+                    <h2>Marvel Rivals download and launcher FAQ</h2>
+                    <details><summary>Where can I download Marvel Rivals for PC?</summary><p>Open the current Steam or Epic Games Store listing above, then complete installation and account steps on that platform. This site does not host installers, game files or launcher software.</p></details>
+                    <details><summary>Can I download Marvel Rivals on Xbox or PlayStation 5?</summary><p>Use the official console-store links above and confirm the current store availability, account requirements and storage information on the selected platform page.</p></details>
+                    <details><summary>Where can I find Marvel Rivals system requirements?</summary><p>Check the current Steam or Epic Games Store listing immediately before installation. Requirements, storage guidance, supported operating systems and regional availability can change.</p></details>
+                    <details><summary>Is there an official Marvel Rivals launcher download on this site?</summary><p>No. Marvel Rivals Independent Fan Guide is not a game distributor and does not provide a launcher, APK, installer, login page or account service.</p></details>
+                    <div class="note"><strong>Safety check:</strong> install only through an official store or publisher channel. Avoid copied installers, unofficial launchers and pages requesting unrelated account permissions.</div>
                 </div>
             </div>
         </section>
@@ -315,5 +329,6 @@
                 </div>
             </div>
         </footer>
+        <script>document.querySelectorAll('[data-store]').forEach(function(link){link.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','official_store_click',{store:link.dataset.store});});});</script>
     </body>
 </html>

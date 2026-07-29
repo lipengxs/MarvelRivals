@@ -14,10 +14,10 @@
         <meta property="og:site_name" content="Marvel Rivals"/>
         <link rel="canonical" href="https://marvelrivals.net/guides/rivals-tracker"/>
         <script type="application/ld+json">
-        [{"@context":"https://schema.org","@type":"WebPage","name":"Marvel Rivals Tracker Resources & Hero Analytics","url":"https://marvelrivals.net/guides/rivals-tracker","description":"Independent Marvel Rivals tracker resources, hero analytics, and team-building references."},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marvelrivals.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://marvelrivals.net/guides/heroes-guides"},{"@type":"ListItem","position":3,"name":"Tracker Resources","item":"https://marvelrivals.net/guides/rivals-tracker"}]}]
+        [{"@context":"https://schema.org","@type":"WebPage","name":"Marvel Rivals Tracker Resources & Hero Analytics","url":"https://marvelrivals.net/guides/rivals-tracker","description":"Independent Marvel Rivals tracker resources, hero analytics, and team-building references."},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marvelrivals.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://marvelrivals.net/guides/heroes-guides"},{"@type":"ListItem","position":3,"name":"Tracker Resources","item":"https://marvelrivals.net/guides/rivals-tracker"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a Marvel Rivals tracker show live match data?","acceptedAnswer":{"@type":"Answer","text":"Tracker availability and live coverage depend on the provider. Check the provider's current page for supported modes, platforms, patch scope and privacy terms; this independent guide does not operate a live match tracker."}},{"@type":"Question","name":"How do you check character rank or proficiency in Marvel Rivals?","acceptedAnswer":{"@type":"Answer","text":"Use the current in-game profile or official leaderboard options when they are available, then check a third-party provider's stated coverage before relying on an external lookup. This guide does not access accounts, profiles, or match histories."}},{"@type":"Question","name":"Why can Marvel Rivals tracker stats differ?","acceptedAnswer":{"@type":"Answer","text":"A figure can vary by patch, platform, mode, rank range, sample size and collection period. A number without these labels should not be used as a current performance conclusion."}},{"@type":"Question","name":"Is it safe to connect an account to a Marvel Rivals tracker?","acceptedAnswer":{"@type":"Answer","text":"Review the provider, permissions and privacy policy before connecting an account. Do not grant unrelated permissions, and remember that this site does not request game accounts, authorization tokens or match-history data."}}]}]
         </script>
         <link rel="icon" href="/static/favicon.ico" sizes="32x32"/>
-        <link rel="stylesheet" href="https://marvelrivals.net/static/base.css?v=0.5">
+        <link rel="stylesheet" href="/static/base.css?v=0.7">
         <meta name="indexnow-key" content="B362957FC36C5EDDD6079B6D78330424"/> 
         <!-- Microsoft Validation -->
         <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
@@ -308,6 +308,11 @@
                     grid-template-columns: 1fr;
                 }
             }
+
+            .tracker-faq { margin: 60px 0; }
+            .tracker-faq details { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin: 12px 0; padding: 16px 18px; }
+            .tracker-faq summary { cursor: pointer; color: #1d3557; font-weight: 700; }
+            .tracker-faq p { color: #4b5563; line-height: 1.65; margin: 14px 0 2px; }
         </style>
     </head>
     <body>
@@ -333,7 +338,7 @@
                         <li><a href="/heroes/">Heroes</a></li>
                         <li><a href="/hero-team">Hero Teams</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Guides</a>
+                            <a href="/guides/heroes-guides" class="dropdown-toggle">Guides</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/guides/heroes-guides">Heroes Guides</a></li>
                                 <li><a href="/guides/rivals-tracker">Rivals Tracker</a></li>
@@ -365,24 +370,24 @@
 
                 <section class="tracker-versions">
                     <div class="version-card desktop">
-                        <h2>Desktop Version</h2>
+                        <h2>Historical desktop tracker reference</h2>
                         <div class="img-container">
-                            <img src="../static/images/rivals-desk.jpg" alt="Marvel Rivals Desktop Tracker Interface" class="tracker-img">
+                            <img src="../static/images/rivals-desk.jpg" alt="Historical third-party desktop tracker interface screenshot; not current live data" class="tracker-img" loading="lazy" decoding="async">
                         </div>
                         <div class="version-details">
-                            <p>This guide does not distribute desktop tracker software. Before installing any third-party tool, verify its publisher, permissions, privacy policy, malware scan result, and current game-policy compatibility.</p>
+                            <p>This historical screenshot is included only to explain the type of dashboard a third-party product may show. It is not live data or an endorsement. This guide does not distribute desktop tracker software; verify the publisher, permissions, privacy policy and current game-policy compatibility before installing any external tool.</p>
                             <span class="download-button" aria-disabled="true">No software download hosted here</span>
                         </div>
                     </div>
 
                     <div class="version-card web">
-                        <h2>Web Version</h2>
+                        <h2>Third-party web dashboard reference</h2>
                         <div class="img-container">
-                            <img src="../static/images/rivals-website.jpg" alt="Marvel Rivals Web Tracker Interface" class="tracker-img">
+                            <img src="../static/images/rivals-website.jpg" alt="Historical third-party web tracker interface screenshot; not current live data" class="tracker-img" loading="lazy" decoding="async">
                         </div>
                         <div class="version-details">
-                            <p>Access your stats anywhere with our web-based tracker.</p>
-                            <a target="_blank" rel="noopener noreferrer" href="https://rivalsmeta.com/" class="visit-button">Visit Web Tracker</a>
+                            <p>This site does not operate a web-based tracker. If you choose to visit a third-party provider, review its current coverage, source methodology and privacy terms before using any statistic.</p>
+                            <a target="_blank" rel="noopener noreferrer" href="https://rivalsmeta.com/" class="visit-button" data-analytics-event="third_party_tracker_click">Open third-party tracker</a>
                         </div>
                     </div>
                 </section>
@@ -402,6 +407,24 @@
                         </div>
                     </div>
                     <p class="intro-section"><strong>Update policy:</strong> this page intentionally does not publish an undated tier list or permanent hero ranking. Add a named stat only with its source URL, patch or collection date, scope, and review date.</p>
+                </section>
+                <section class="stats-dashboard">
+                    <h2>Turn a Tracker Question Into a Season Decision</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card win-rates"><h3>1. Check the scope</h3><p>Confirm patch, mode, platform, rank range, sample size, and collection period. If one is missing, do not treat the figure as advice.</p></div>
+                        <div class="stat-card pick-rates"><h3>2. Check the team job</h3><p>Use the result to ask one bounded question about pressure, space, protection, objective control, or a reset—not which hero is universally “best.”</p></div>
+                        <div class="stat-card win-rates"><h3>3. Review a source-linked next step</h3><p><a href="/season/" data-analytics-event="season_hub_view">Season Hub</a> · <a href="/team-composer" data-analytics-event="team_composer_open">Team Composer</a> · <a href="/heroes/" data-analytics-event="hero_decision_open">hero decision cards</a></p></div>
+                    </div>
+                </section>
+
+                <section class="tracker-faq" aria-labelledby="tracker-faq-title">
+                    <h2 id="tracker-faq-title">Marvel Rivals tracker FAQ</h2>
+                    <details><summary>Can a Marvel Rivals tracker show live match data?</summary><p>Live coverage is a provider feature, not a promise this guide can make. Before relying on a tool, check its current supported modes, platforms, patch scope, update timing and privacy terms. This site does not operate a live-match tracker or receive match data.</p></details>
+                    <details><summary>How do you check character rank or proficiency in Marvel Rivals?</summary><p>Start with the current in-game profile or official leaderboard options when they are available. If you use an external lookup, verify that it supports your platform and mode and explains what its rank or proficiency field means. This guide does not look up player accounts, profiles or match history.</p></details>
+                    <details><summary>What Marvel Rivals stats are useful for a team decision?</summary><p>Use a stat only after confirming its patch, mode, platform, rank range, sample size and collection period. Then turn it into one testable question—such as whether the team needs clearer objective coverage or a safer reset—rather than treating it as a permanent hero ranking.</p></details>
+                    <details><summary>Why can Marvel Rivals tracker stats differ between sites?</summary><p>Providers can observe different populations and time periods. A number may change with the patch, platform, mode, rank range, sample and collection date. If those labels are missing, treat the number as unverified context rather than advice.</p></details>
+                    <details><summary>Is it safe to connect an account to a Marvel Rivals tracker?</summary><p>Review the provider, requested permissions and privacy policy before connecting an account. Do not grant unrelated permissions. Marvel Rivals Independent Fan Guide does not request game credentials, authorization tokens or match-history data.</p></details>
+                    <p><a href="/season/data-sources">Read the decision-data policy</a> · <a href="/guides/ranked-team-comps">Use the ranked team-composition playbook</a></p>
                 </section>
 
                 <section class="game-modes">
@@ -450,21 +473,21 @@
                             </ul>
                         </div>
                         <div class="feature-card">
-                            <h3>Rank Tracking</h3>
+                            <h3>Account and privacy boundary</h3>
                             <ul>
-                                <li>Track your competitive rank</li>
-                                <li>View rank history</li>
-                                <li>Compare with other players</li>
-                                <li>Top 500 leaderboards</li>
+                                <li>This site does not collect game accounts, match history, or authorization tokens</li>
+                                <li>Check a provider’s current privacy policy before connecting an account</li>
+                                <li>Do not assume a provider covers every platform or mode</li>
+                                <li>Leave a service that requests unrelated permissions</li>
                             </ul>
                         </div>
                         <div class="feature-card">
-                            <h3>Match Analysis</h3>
+                            <h3>Decision review</h3>
                             <ul>
-                                <li>Detailed match history</li>
-                                <li>Team composition analysis</li>
-                                <li>Map performance stats</li>
-                                <li>Teammate performance tracking</li>
+                                <li>Test one role or communication change at a time</li>
+                                <li>Use Team Composer for explainable role coverage</li>
+                                <li>Check the official version before applying old advice</li>
+                                <li>Keep personal observations separate from public data</li>
                             </ul>
                         </div>
                     </div>
@@ -521,5 +544,12 @@
                 </div>
             </div>
         </footer>
+    <script>
+        document.querySelectorAll('[data-analytics-event]').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (typeof gtag === 'function') gtag('event', link.dataset.analyticsEvent);
+            });
+        });
+    </script>
     </body>
 </html>

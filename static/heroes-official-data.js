@@ -1076,6 +1076,14 @@ var officialHeroesData = [
     }
 ];
 
+/* Decision-tool provenance fields. A null patchVersion is deliberate: no
+ * patch-specific claim is allowed until a dated official source is recorded. */
+officialHeroesData.forEach(function(hero) {
+    hero.sourceDate = hero.releaseDate;
+    hero.patchVersion = null;
+    hero.reviewedAt = '2026-07-28';
+});
+
 (function mergeOfficialHeroesData() {
     function cleanName(value) {
         return String(value || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().toUpperCase();

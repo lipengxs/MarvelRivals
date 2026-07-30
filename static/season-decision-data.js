@@ -49,6 +49,47 @@ window.seasonDecisionRegistry = {
       status: 'Do not use a numeric value for a current decision without version and official source review.'
     }
   },
+  latestReviewedPatch: {
+    version: '20260723',
+    guideUrl: '/patches/20260723-patch-notes',
+    sourceUrl: 'https://www.marvelrivals.com/20260722/41525_1308589.html',
+    sourceDate: '2026-07-22',
+    reviewedAt: '2026-07-29'
+  },
+  heroPatchRecords: {
+    'the-punisher': {
+      patchVersion: '20260723',
+      guideUrl: '/patches/20260723-patch-notes',
+      sourceUrl: 'https://www.marvelrivals.com/20260722/41525_1308589.html',
+      sourceDate: '2026-07-22',
+      reviewedAt: '2026-07-29',
+      summary: 'The official notes document a Culling Turret ammo-count display fix. They do not state a balance-value or performance change.'
+    },
+    angela: {
+      patchVersion: '20260723',
+      guideUrl: '/patches/20260723-patch-notes',
+      sourceUrl: 'https://www.marvelrivals.com/20260722/41525_1308589.html',
+      sourceDate: '2026-07-22',
+      reviewedAt: '2026-07-29',
+      summary: 'The official notes document a costume weapon-asset fix. They do not state a balance-value or performance change.'
+    },
+    daredevil: {
+      patchVersion: '20260723',
+      guideUrl: '/patches/20260723-patch-notes',
+      sourceUrl: 'https://www.marvelrivals.com/20260722/41525_1308589.html',
+      sourceDate: '2026-07-22',
+      reviewedAt: '2026-07-29',
+      summary: 'The official notes document a costume weapon-asset fix. They do not state a balance-value or performance change.'
+    },
+    gambit: {
+      patchVersion: '20260723',
+      guideUrl: '/patches/20260723-patch-notes',
+      sourceUrl: 'https://www.marvelrivals.com/20260722/41525_1308589.html',
+      sourceDate: '2026-07-22',
+      reviewedAt: '2026-07-29',
+      summary: 'The official notes document a costume weapon-asset fix. They do not state a balance-value or performance change.'
+    }
+  },
   roleJobs: {
     DUELIST: { solves: ['create pressure', 'convert an opening', 'finish a focused target'], check: 'Confirm a safe angle, a timing call, and a reset route with the team.' },
     VANGUARD: { solves: ['shape frontline space', 'contest an objective', 'protect an entry or retreat'], check: 'Confirm who follows the entry and where the team resets if space is lost.' },

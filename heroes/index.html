@@ -727,7 +727,7 @@
                                     ${guideMarkup(hero)}
                                     <div class="hero-actions">
                                         <a href="/heroes/${heroSlug(hero.nickname)}/">Local Guide</a>
-                                        ${hero.sourceUrl ? `<a href="${hero.sourceUrl}" target="_blank" rel="noopener">Official Profile</a>` : ''}
+                                        ${hero.sourceUrl ? `<a href="${hero.sourceUrl}" target="_blank" rel="noopener noreferrer">Official Profile</a>` : ''}
                                         <button type="button" class="story-toggle">Story</button>
                                     </div>
                                     <div class="hero-story">${hero.story || ''}</div>

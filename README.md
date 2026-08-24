@@ -27,7 +27,7 @@ Marvel Rivals throws you into an epic conflict where Doctor Doom's actions have 
 Join Marvel Rivals - The ultimate 6v6 superhero team-based shooter! Fight alongside iconic Marvel heroes like Iron Man and Captain America in epic battles across destructible environments. Free to play, launching December 2024 on all platforms! #MarvelRivals #MarvelGaming
 
 ### Beta Test Promotion
-Want early access to Marvel Rivals' thrilling battles? Beta testing begins April 2024! Register on our official website now to secure your spot and join players worldwide in this epic combat! #MarvelRivalsBeta
+Want early access to Marvel Rivals' thrilling battles? Beta testing begins April 2024! Check the developer's official channels for current test announcements. This repository documents an independent, unofficial fan resource and does not operate the game or its registration service. #MarvelRivalsBeta
 
 ### Platform Availability
 - Steam: [Marvel Rivals on Steam](https://store.steampowered.com/app/2767030/Marvel_Rivals/)
@@ -59,7 +59,7 @@ Minimum Requirements:
 
 ## 📮 Connect With Us
 
-- Official Website: [marvelrivals.net](https://marvelrivals.net)
+- Independent guide: [marvelrivals.net](https://marvelrivals.net) · verify announcements on the developer's official channels
 - Discord: [Join our community](https://discord.gg/marvelrivals)
 
 ---

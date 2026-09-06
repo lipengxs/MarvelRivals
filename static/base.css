@@ -868,6 +868,23 @@ main {
     line-height: 1.55;
 }
 
+.decision-note {
+    max-width: 1180px;
+    margin: 20px auto;
+    padding: 18px 20px;
+    background: #f7fbff;
+    border: 1px solid #d7e7f5;
+    border-left: 4px solid #2676c8;
+}
+
+.decision-note h2 {
+    margin: 0 0 8px;
+    color: #1d3557;
+    font-size: 1.2rem;
+}
+
+.decision-note p { margin: 0; color: #4b5563; line-height: 1.65; }
+
 @media (max-width: 768px) {
     .footer-links {
         flex-wrap: wrap;

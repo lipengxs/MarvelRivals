@@ -1,10 +1,10 @@
 {
   "game": "Marvel Rivals",
   "origin": "https://marvelrivals.net",
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "title": "Games to Explore After Marvel Rivals",
   "description": "Compare selected games for Marvel Rivals readers, with clear reasons to explore each setting and links to independent guides.",
-  "intro": "Marvel Rivals makes hero combinations and team roles important. Explore different match structures through an ability-led battle royale, tactical squad combat, and extraction shooting.",
+  "intro": "Compare another character-based team shooter when you want to research ability roles and squad choices. Check the match format before assuming Marvel Rivals strategies will carry over.",
   "disclosure": "These independent guide websites are maintained by the same operator. Recommendations are editorial suggestions, not official partnerships or endorsements. Official game sources are listed separately.",
   "entries": [
     {
@@ -12,26 +12,11 @@
       "url": "https://fatetriggerguide.com/",
       "category": "Shooters & Extraction",
       "tags": "Hero abilities · battle royale",
-      "reason": "Research an ability-driven battle royale and its character roles. It offers a way to compare team decisions across a different match structure.",
+      "reason": "Research character abilities and coordinated squad choices in another shooter, with separate attention to its match structure.",
       "difference": "Fate Trigger centres on ability-driven shooting in a battle-royale setting; Marvel Rivals centres on team-based hero combat and role combinations. Similar interests do not imply identical mechanics or multiplayer support."
-    },
-    {
-      "name": "WARDOGS",
-      "url": "https://wardogsguide.com/",
-      "category": "Shooters & Extraction",
-      "tags": "Tactical shooting · squad coordination",
-      "reason": "Explore tactical squad roles and coordinated shooting. Its guide helps you compare team organisation rather than assuming hero abilities or extraction rules carry across games.",
-      "difference": "WARDOGS centres on tactical shooting and coordinated squad play; Marvel Rivals centres on team-based hero combat and role combinations. Similar interests do not imply identical mechanics or multiplayer support."
-    },
-    {
-      "name": "Beautiful Light",
-      "url": "https://beautifullightguide.com/",
-      "category": "Shooters & Extraction",
-      "tags": "Extraction · tactical shooting · horror",
-      "reason": "Research a shooter where extraction objectives meet horror imagery. Consider it for armed team encounters and tension rather than for a peaceful exploration loop.",
-      "difference": "Beautiful Light centres on tactical extraction shooting with horror elements; Marvel Rivals centres on team-based hero combat and role combinations. Similar interests do not imply identical mechanics or multiplayer support."
     }
   ],
   "articles": [],
-  "guideRecommendations": []
+  "guideRecommendations": [],
+  "directoryLinkRel": "nofollow"
 }
